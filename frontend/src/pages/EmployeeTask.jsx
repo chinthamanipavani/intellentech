@@ -8,7 +8,7 @@ const EmployeeTask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/tasks/submitted");
+        const res = await axios.get(" https://intellentech-3lxa.onrender.com/api/tasks/submitted");
         setTasks(res.data);
       } catch (err) {
         console.error(err);

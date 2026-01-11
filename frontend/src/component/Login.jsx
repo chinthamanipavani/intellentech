@@ -24,7 +24,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://intellentech-3lxa.onrender.com/api/users/login",
         form
       );
       alert(res.data.message);

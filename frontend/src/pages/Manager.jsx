@@ -34,7 +34,7 @@ const Manager = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/tasks/create", {
+      await axios.post(" https://intellentech-3lxa.onrender.com/api/tasks/create", {
         ...task,
 
         createdBy: localStorage.getItem("email"), // ⭐ important

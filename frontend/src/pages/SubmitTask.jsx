@@ -22,7 +22,7 @@ const SubmitTask = () => {
     const fetchSubmittedTask = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/tasks/submitted/${taskId}`
+          ` https://intellentech-3lxa.onrender.com/api/tasks/submitted/${taskId}`
         );
         setSubmittedTask(res.data);
       } catch (err) {
@@ -44,7 +44,7 @@ const SubmitTask = () => {
     e.preventDefault();
     try {
       await axios.post(
-        `http://localhost:5000/api/tasks/submit/${taskId}`,
+        ` https://intellentech-3lxa.onrender.com/api/tasks/submit/${taskId}`,
         form
       );
 
@@ -60,7 +60,7 @@ const SubmitTask = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/tasks/submitted/${taskId}`,
+        ` https://intellentech-3lxa.onrender.com/api/tasks/submitted/${taskId}`,
         form
       );
 
@@ -156,11 +156,21 @@ const SubmitTask = () => {
             borderRadius: "8px",
           }}
         >
-          <p><b>Name:</b> {submittedTask.taskName}</p>
-          <p><b>Link:</b> {submittedTask.taskLink}</p>
-          <p><b>File:</b> {submittedTask.fileUrl}</p>
-          <p><b>Status:</b> {submittedTask.status}</p>
-          <p><b>Notes:</b> {submittedTask.notes}</p>
+          <p>
+            <b>Name:</b> {submittedTask.taskName}
+          </p>
+          <p>
+            <b>Link:</b> {submittedTask.taskLink}
+          </p>
+          <p>
+            <b>File:</b> {submittedTask.fileUrl}
+          </p>
+          <p>
+            <b>Status:</b> {submittedTask.status}
+          </p>
+          <p>
+            <b>Notes:</b> {submittedTask.notes}
+          </p>
 
           <button onClick={enableEditMode}>Edit / Update Task</button>
         </div>

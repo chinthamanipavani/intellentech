@@ -26,7 +26,7 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://intellentech-3lxa.onrender.com/api/users/register",
         form
       );
       alert(res.data.message);
