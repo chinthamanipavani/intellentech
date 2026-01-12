@@ -10,6 +10,7 @@ import Viewer from "./pages/Viewer";
 import AllTasks from "./pages/AllTasks";
 import SubmitTask from "./pages/SubmitTask";
 import EmployeeTask from "./pages/EmployeeTask";
+import ForgotPassword from "./component/ForgotPassword";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/tasks" element={<AllTasks />} />
         <Route path="/submitTask/:taskId" element={<SubmitTask />} />
         <Route path="/employeeTask" element={<EmployeeTask />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
       </Routes>
     </>
   );

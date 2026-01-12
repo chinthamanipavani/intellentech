@@ -142,19 +142,25 @@ const Login = () => {
               className="input-field"
               required
             />
-
+            <button
+              onClick={() => {
+                navigate("/forgotPassword");
+              }}
+            >
+              fomgot password
+            </button>
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Logging in..." : "Login"}
-            </button> 
+            </button>
             <p style={{ textAlign: "center", marginTop: "10px" }}>
-  Not registered yet?{" "}
-  <span
-    style={{ color: "#3b82f6", cursor: "pointer" }}
-    onClick={() => navigate("/")}
-  >
-    Register here
-  </span>
-</p>
+              Not registered yet?{" "}
+              <span
+                style={{ color: "#3b82f6", cursor: "pointer" }}
+                onClick={() => navigate("/")}
+              >
+                Register here
+              </span>
+            </p>
           </form>
         </div>
       </div>
