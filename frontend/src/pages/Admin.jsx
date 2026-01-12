@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import AllTasks from "./AllTasks";
+import EmployeeTask from "./EmployeeTask";
+import Manager from "./Manager";
 
 const Admin = () => {
   return (
-    <div>Admin</div>
-  )
-}
+    <div>
+      <Manager/>
+      <EmployeeTask/>
+    </div>
+  );
+};
 
-export default Admin
+export default Admin;
